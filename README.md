@@ -1,120 +1,39 @@
-# React + Vite
+# EasyText – Text Utility Platform (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EasyText is a frontend-only, scalable single-page web application built using HTML, CSS, JavaScript, and React. The project provides multiple text-related utility tools through a modular, feature-based architecture and focuses on frontend engineering, scalability, and clean application structure.
 
-Currently, two official plugins are available:
+This repository contains only the client-side implementation and is designed to be backend-ready for future API integration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
+- Multiple independent text utility tools, including:
+  - Blog title, summary, and content utilities  
+  - Paragraph text utility  
+  - Social media post content utility  
+  - Promotional content utility  
+  - YouTube title and description utilities  
+  - Job role and text formatting utilities
+- Modular, feature-based routing using React Router
+- Responsive and accessible UI design
+- Environment-based configuration for backend readiness
+- Production-ready build and deployment setup
 
- <div className="serviceList mx-md-4 mx-2 my-3 px-md-2 px-1 pt-2 d-flex flex-wrap align-items-center justify-content-center">
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Blog Title</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Blog Introduction</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Blog Content</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Blog Post</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Paragraph</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Social Media Post</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Promotional Advertisement</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Professional Email</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > App Notification</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Youtube Video Description</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Youtube Video Tags</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Youtube Video Title</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Text Formate</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Sentence Expender</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > One Line Description</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Job Decsription</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Change Text Tone</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Photo Caption</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Image to Sumarize Content</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Image to Question-Answer</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Transcription of Audio</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Describe Audio</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Sumarize Audio</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Audio to Question-Answer</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Get Python Code</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Execute Python Code</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-            <div className="serciceItem mx-2 my-2 position-relative rounded-3 overflow-hidden fs-5 fw-semibold text-center text-white">
-              <div className=' rounded-top-3 position-relative z-1 bg-black px-md-3 px-2 pt-md-3 pt-sm-2' > Get json Output</div>
-              <div className=' rounded-bottom-3 bg-black position-relative z-1 fw-light text-center px-2 pb-4 pt-1' style={{ fontSize: "15px" }}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quos dolorum rerum maiores qui </div>
-            </div>
-          </div>
+## 🛠 Tech Stack
+
+- **Languages:** HTML, CSS, JavaScript (ES6+)
+- **Framework & Libraries:** React, React Router
+- **Styling:** Chakra UI, Tailwind CSS, Custom CSS
+- **Build Tool:** Vite
+- **Deployment:** Netlify (SPA routing configured)
+
+## 🧱 Architecture Overview
+
+- **Single Page Application (SPA):** All features are handled on the client side with seamless navigation.
+- **Modular Design:** Each text utility is implemented as an independent route/component, enabling easy scalability and feature expansion.
+- **Context API:** Used for global configuration management (e.g., environment-based backend URL).
+- **Backend-ready Structure:** The application is structured to support future API integration without requiring architectural changes.
+
+## ⚠️ Important Note
+
+This project is a frontend-only implementation.  
+There is no backend or AI logic included in this repository. The application is intended to act as a frontend client that can integrate with external APIs in the future.
